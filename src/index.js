@@ -2,7 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import TestingAcc from './components/testingAccordion.js'
+import ToggleButton from './components/ToggleButton.js'
 import reportWebVitals from './reportWebVitals';
+import FlowTable from './InputTable/FlowTable.js';
 
 ReactDOM.render(
     <App/>,

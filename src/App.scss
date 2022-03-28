@@ -1,9 +1,23 @@
 @import "~bootstrap/scss/bootstrap";
 
+$bg-grey: #1e2124;
+$text-softgrey: #8c8c8c;
+$bg-softgrey: #393939;
+$rb-green: #00ed94;
+$accent: wheat;
+$heavy-gold: #e6c206;
+$soft-white: rgb(255, 255, 255, 0.80);
+
+.start-container{
+  background-color: $bg-grey;
+  height: 100vh;
+  margin-top:0px;
+}
 .start-title{
+  color:$soft-white;
   display: block;
   font-size: 50px;
-  margin-top: 100px;
+  padding-top: 100px;
   margin-left: auto;
   margin-right: auto;
   width: fit-content;
@@ -17,11 +31,243 @@
   margin-top: 100px;
 }
 .app{
-  margin-top: 30px;
+  padding-bottom: 60px;
+  padding-top: 60px;
   background-color: rgb(202, 204, 206);
   border-radius: 12px;
 }
 .app-navbar{
   padding-left: 0;
   padding-right: 0;
+}
+.row{
+  margin-top: 20px
+}
+.sub-row{
+  padding: 0px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.wacc-row{
+  margin-top: 0px
+}
+.form-label{
+  color: $soft-white;
+}
+.btn-submit{
+  color: black;
+  margin-top: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+h3{
+  color: $rb-green !important;
+  font-size: 1.35rem;
+}
+#root{
+  background-color: white;
+}
+.app{
+  background-color: $bg-grey;
+}
+.form-control{
+  color: $soft-white;
+  border-radius: 6px;
+  border: none;
+  background-color: $bg-softgrey;
+  &::placeholder{
+    color: #757575;
+  }
+}
+input[type=number]:focus{
+  color: $soft-white;
+  background-color: #ff5a8738;
+  box-shadow:0px 0px 10px #ff5a8738;
+  animation: none;
+  border: 0;
+  outline: none;
+}
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type=number] { 
+  -moz-appearance: textfield;
+  appearance: textfield;
+  margin: 0; 
+}
+.line-divider{
+  color: $rb-green;
+  width: max-content;
+}
+hl{
+  margin-top: 3px;
+  margin-bottom: 20px;
+  background-image: linear-gradient(to right, #1e2124 0%, $accent 10%, $accent 90%, #1e2124 100%);
+  height:2px;
+  width: 100%;
+  display: inline;
+  float: right;
+}
+.divider{
+  h3{
+    display: inline;
+    float:left;
+    width:fit-content;
+  }
+
+  &.results{
+    h3{
+      display: block;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    font-size: 1.95rem !important;
+  }
+}
+.btn-outline-success{
+  color: $bg-grey;
+  background-color: $rb-green;
+  border-color: $rb-green;
+  outline: none;
+  &:hover{
+    background-color: #00ed94a6;
+  }
+}
+.input-subheading{
+  margin-bottom: 10px;
+  color: $soft-white;
+  font-size: 1.1rem;
+}
+.output-text{
+  color: $soft-white;
+  margin-top:10px;
+  font-size: 1.2rem;
+}
+.toggle-button{
+  margin-bottom:30px;
+}
+.toggle-button-left{
+  border-right: 2px solid $soft-white;
+}
+.toggle-button-right{
+  border-left: 2px solid $soft-white;
+}
+.accordionInput{
+  background-color: $bg-grey;
+}
+
+.btn-toggle{
+  border: 3px solid $rb-green;
+  display: inline-block;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  transition: background 600ms ease, color 600ms ease;
+}
+
+input[type="radio"].toggle {
+  display: none;
+  & + label{
+      cursor: pointer;
+      min-width: 60px;
+      &:hover{
+          background-color: none;
+          color: $rb-green;
+      }
+  }
+  &.toggle-left + label {
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+      border-right: 0;
+  }
+  &.toggle-right + label{
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+      margin-left: -2px;
+  }
+  &:checked + label {
+      background-color: #ffffff;
+      cursor: default;
+      color: $rb-green;
+      transition: color 200ms;
+  }
+}
+.toggleContainer{
+  margin-bottom:30px;
+}
+.btn-dropdown {
+  color : black !important;
+}
+label {
+  color: $soft-white;
+}
+.tableInput{
+  &:focus{
+    color: black !important;
+  }
+  width: 100px;
+}
+
+th {
+  color: $soft-white;
+  background-color: $text-softgrey;
+}
+td {
+  text-align: center;
+  color: $soft-white;
+  background-color: #ffffff;
+  padding: 8px 5px 8px 5px;
+}
+.flow-table{
+  padding: 20px 20px 20px 20px;
+}
+.flow-table-container{
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $rb-green;
+  padding: 10px 0px 10px 0px;
+  width:fit-content;
+  border-radius: 10px;
+}
+.table-header{
+  th{
+    background-color: $rb-green;
+    text-align: center;
+    padding-bottom:6px;
+  }
+}
+.table-side-header{
+  background-color: #ffffff;
+  color: $rb-green;
+  padding: 0px 10px 0px 10px;
+}
+.cell-read-only{
+  padding: 0px 20px 0px 20px;
+  color: $heavy-gold;
+  font-weight: bold;
+}
+.table-alert{
+  color: white;
+  text-align: center;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid $rb-green;
+  padding:20px;
+}
+.input-results{
+  color: $bg-grey;
+  background-color: #ffffff;
+  border-top-right-radius: 6px !important;
+  border-bottom-right-radius: 6px !important;
+  &:disabled{
+    background-color: grey !important;
+  }
+}
+@media (min-width: 1200px){
+.container-xl, .container-lg, .container-md, .container-sm, .container {
+  max-width: 1260px;
+}
 }
