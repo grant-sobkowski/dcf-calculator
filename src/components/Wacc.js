@@ -29,7 +29,7 @@ export default class Wacc extends React.Component{
                 <h3>Cost of Debt</h3>
                 <hl is=""></hl>
             </Row>
-            <Form.Group as={Col} className="mb-3" controlId="exampleForm.ControlInput1">
+            <Form.Group as={Col} sm={12} md={6} className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label>Total Debt ($)</Form.Label>
               <InputGroup>
               <Form.Control
@@ -39,7 +39,7 @@ export default class Wacc extends React.Component{
                 placeholder="20"
                 min="0"
                 max="999"
-                step=".01"
+                step=".0001"
                 name="debt"
                 value={this.props.debt}
                 onChange={this.props.handleChange} />
@@ -53,15 +53,15 @@ export default class Wacc extends React.Component{
                 </Form.Control.Feedback>
                 </InputGroup>
             </Form.Group>
-            <Form.Group as={Col}>
+            <Form.Group as={Col} sm={12} md={6}>
               <Form.Label>Interest Rate (%)</Form.Label>
               <Form.Control
                 required
                 type="number" 
                 placeholder="3"
-                min=".01"
+                min="0.0001"
                 max="100"
-                step=".01"
+                step=".0001"
                 name="interest"
                 value={this.props.interest}
                 onChange={this.props.handleChange} />
@@ -75,14 +75,39 @@ export default class Wacc extends React.Component{
                 <h3>Cost of Equity</h3>
                 <hl is=""></hl>
             </Row>
-            <Row className="sub-row wacc-row">
+            <Row className="sub-row market-cap">
+            <Form.Group as={Col} sm={12} md={6}>
+              <Form.Label>Market Capitalization ($)</Form.Label>
+              <InputGroup>
+              <Form.Control 
+                required
+                type="number" 
+                placeholder="106"
+                min="0.001"
+                max="999"
+                step=".0001"
+                name="market_cap"
+                value={this.props.market_cap}
+                onChange={this.props.handleChange} />
+                <UnitsDropdown
+                  form_title="market_cap_units"
+                  form_units={this.props.market_cap_units}
+                  handleDropdownChange={this.props.handleDropdownChange}
+                />
+                <Form.Control.Feedback type="invalid">
+                  Please enter a number within the range 0 - 999 Trillion
+                </Form.Control.Feedback>
+                </InputGroup>
+            </Form.Group>
+            </Row>
+            <Row className="sub-row">
               <p className="input-subheading">Equity Evaluation Method:</p>
               <ToggleButton
               handleChange={this.props.handleChange}
               unitsId="equityMethod"
               optionOne="CAPM"
               optionOneId="CAPM"
-              optionTwo="DDM"
+              optionTwo="DGM"
               optionTwoId="DDM"
               currentMethodName="equityMethod"
               currentMethod={this.props.equityMethod}

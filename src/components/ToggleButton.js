@@ -22,6 +22,7 @@ export default class ToggleButton extends React.Component{
         <input as={Col} id={optionTwo} className="toggle toggle-right" name={this.props.currentMethodName} type="radio"
             onChange={this.props.handleChange} 
             value={this.props.optionTwoId}
+            checked={this.props.currentMethod == this.props.optionTwoId}
             />
         <label htmlFor={optionTwo} className="btn-toggle">{this.props.optionTwo}</label>
     </div>

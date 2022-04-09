@@ -19,101 +19,58 @@ export default class CostEquity extends React.Component {
     if(this.props.equityMethod == "CAPM"){
     return(
     <Row className = "sub-row wacc-row">
-        <Row className="sub-row wacc-row">
-        <Form.Group as={Col}>
-          <Form.Label>Market Capitalization ($)</Form.Label>
-          <InputGroup>
-          <Form.Control 
-            required
-            type="number" 
-            placeholder="106"
-            min="0"
-            max="999"
-            step=".01"
-            name="market_cap"
-            value={this.props.market_cap}
-            onChange={this.props.handleChange} />
-            <UnitsDropdown
-              form_title="market_cap_units"
-              form_units={this.props.market_cap_units}
-              handleDropdownChange={this.props.handleDropdownChange}
-            />
-            <Form.Control.Feedback type="invalid">
-              Please enter a number within the range 0 - 999 Trillion
-            </Form.Control.Feedback>
-            </InputGroup>
-        </Form.Group>
-        </Row>
-        <Row className="sub-row">
-        <Form.Group as={Col}>
-          <Form.Label>Historical Beta</Form.Label>
-          <Form.Control
-            required
-            type="number" 
-            placeholder=".80"
-            min=".01"
-            max="100"
-            step=".01"
-            name="beta"
-            value={this.props.beta}
-            onChange={this.props.handleChange} />
-            <Form.Control.Feedback type="invalid">
-             Please enter a number within the range .01 - 100
-            </Form.Control.Feedback>
-        </Form.Group>
-        <Form.Group as={Col}>
+        <Form.Group as={Col} sm={12} md={6}>
           <Form.Label>Expected Market Return (%)</Form.Label>
           <Form.Control 
             required
             type="number" 
             placeholder="12"
-            min=".01"
+            min=".0001"
             max="100"
-            step=".01"
+            step=".0001"
             name="market_return"
             value={this.props.market_return}
             onChange={this.props.handleChange} />
             <Form.Control.Feedback type="invalid">
-             Please enter a number within the range of .01 - 100
+             Please enter a number within the range of .0001 - 100
             </Form.Control.Feedback>
         </Form.Group>
-        </Row>
     </Row>
 
     );
     }
     return(
       <Row className="sub-row wacc-row">
-        <Form.Group as={Col}>
-          <Form.Label>Dividend Yield (%)</Form.Label>
+        <Form.Group as={Col} sm={12} md={6}>
+          <Form.Label>Forward Dividend Yield (%)</Form.Label>
           <Form.Control 
             required
             type="number"
             placeholder="3.60"
-            min=".01"
+            min=".0001"
             max="100"
-            step=".01"
+            step=".0001"
             name="current_dividend"
             value={this.props.current_dividend}
             onChange={this.props.handleChange} />
             <Form.Control.Feedback type="invalid">
-             Please enter a number within the range of .01 - 100
+             Please enter a number within the range of .0001 - 100
             </Form.Control.Feedback>
         </Form.Group>
-        <Form.Group as={Col}>
+        <Form.Group as={Col} sm={12} md={6}>
           <Form.Label>Dividend Growth Rate (%)</Form.Label>
           <Form.Control 
             required
             type="number"
-            placeholder="1.00"
-            min=".01"
+            placeholder="1.48"
+            min=".0001"
             max="100"
-            step=".01"
+            step=".0001"
             name="dividend_growth_rate"
             value={this.props.dividend_growth_rate}
             onChange={this.props.handleChange} />
             <Form.Control.Feedback type="invalid">
-             Please enter a number within the range of .01 - 100
+             Please enter a number within the range of .0001 - 100
             </Form.Control.Feedback>
         </Form.Group>
       </Row>

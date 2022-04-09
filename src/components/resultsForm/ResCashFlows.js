@@ -21,7 +21,7 @@ export default class ResCashFlows extends React.Component{
             pattern='[\d+]'
             type="number" 
             placeholder="20" min="0" max="999"
-            step=".01"
+            step=".0001"
             name="annual_fcf"
             value={this.props.annual_fcf}
             onChange={this.props.handleChange} />

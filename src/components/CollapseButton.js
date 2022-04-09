@@ -11,7 +11,7 @@ export default class NAME extends React.Component{
     }
     render(){
     return(
-        <Button onClick={()=> this.props.stateChanger(this.props.stateId)}
+        <Button onClick={()=> this.props.handleCollapse(this.props.stateId)}
         aria-controls="example-collapse-text" 
         aria-expanded={this.props.stateVar}
         variant="success"

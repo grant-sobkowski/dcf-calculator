@@ -9,6 +9,7 @@ export default class UnitsDropdown extends React.Component{
     render(){
     return(
         <DropdownButton
+        className='btn-dropdown'
         variant="outline-success"
         title={this.props.form_units} >
         <Dropdown.Item

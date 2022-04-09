@@ -18,29 +18,52 @@ export default class ValueMethod extends React.Component{
         if(this.props.valueMethod == 'terminal_growth'){
             return(
                 <Row className="sub-row wacc-row">
-                    <Form.Group as={Col} md={6}>
+                    <Form.Group as={Col} sm={12} md={6}>
                     <Form.Label>Terminal Growth Rate (%)</Form.Label>
                     <Form.Control
                         required
                         type="number" 
                         placeholder="1.5"
-                        min=".01"
+                        min=".0001"
                         max="100"
-                        step=".01"
+                        step=".0001"
                         name="terminal_growth_rate"
                         value={this.props.terminal_growth_rate}
                         onChange={this.props.handleChange} />
                     <Form.Control.Feedback type="invalid">
-                    Please enter a number within the range .01 - 100.
+                    Please enter a number within the range .0001 - 100.
                     </Form.Control.Feedback>
                     </Form.Group>
                 </Row>
             );
         }
+        else if(this.props.cashFlowMethod == 'custom'){
+            return(
+            <Row className="sub-row wacc-row">
+                <Form.Group as={Col} sm={12} md={6}>
+                <Form.Label>Exit Multiple (EBITDA/EV Ratio)</Form.Label>
+                <Form.Control
+                    required
+                    type="number" 
+                    placeholder="1.5"
+                    min=".0001"
+                    max="999"
+                    step=".0001"
+                    name="exit_multiple"
+                    value={this.props.exit_multiple}
+                    onChange={this.props.handleChange} />
+                <Form.Control.Feedback type="invalid">
+                Please enter a number within the range .0001 - 999.
+                </Form.Control.Feedback>
+                </Form.Group>
+            </Row>
+            );
+        }
         return(
             <Row className="sub-row wacc-row">
-                    <Form.Group as={Col} md={6}>
-                    <Form.Label>Annual EBIT ($)</Form.Label>
+                    <Form.Group as={Col} sm={12} md={6} 
+                        className="mb-3">
+                    <Form.Label>Annual EBITDA ($)</Form.Label>
                     <InputGroup>
                         <Form.Control 
                         required
@@ -48,7 +71,7 @@ export default class ValueMethod extends React.Component{
                         placeholder="5"
                         min="0"
                         max="999"
-                        step=".01"
+                        step=".0001"
                         name="current_ebit"
                         value={this.props.current_ebit}
                         onChange={this.props.handleChange} />
@@ -63,37 +86,37 @@ export default class ValueMethod extends React.Component{
                     </InputGroup>
                     </Form.Group>
 
-                    <Form.Group as={Col} md={6}>
-                    <Form.Label>Projected EBIT Growth Rate (%)</Form.Label>
+                    <Form.Group as={Col} sm={12} md={6}>
+                    <Form.Label>Projected EBITDA Growth Rate (%)</Form.Label>
                     <Form.Control
                         required
                         type="number" 
                         placeholder="1.5"
-                        min=".01"
+                        min=".0001"
                         max="100"
-                        step=".01"
+                        step=".0001"
                         name="ebit_growth_rate"
                         value={this.props.ebit_growth_rate}
                         onChange={this.props.handleChange} />
                     <Form.Control.Feedback type="invalid">
-                    Please enter a number within the range .01 - 100.
+                    Please enter a number within the range .0001 - 100.
                     </Form.Control.Feedback>
 
                     </Form.Group>
-                    <Form.Group as={Col} md={6}>
-                    <Form.Label>Exit Multiple (P/E Ratio)</Form.Label>
+                    <Form.Group as={Col} sm={12} md={6}>
+                    <Form.Label>Exit Multiple (EBITDA/EV Ratio)</Form.Label>
                     <Form.Control
                         required
                         type="number" 
                         placeholder="1.5"
-                        min=".01"
+                        min=".0001"
                         max="999"
-                        step=".01"
+                        step=".0001"
                         name="exit_multiple"
                         value={this.props.exit_multiple}
                         onChange={this.props.handleChange} />
                     <Form.Control.Feedback type="invalid">
-                    Please enter a number within the range .01 - 999.
+                    Please enter a number within the range .0001 - 999.
                     </Form.Control.Feedback>
                     </Form.Group>
             </Row>

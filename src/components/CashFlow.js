@@ -49,22 +49,25 @@ export default class CashFlow extends React.Component{
             <CashFlowMethod
             cashFlowMethod={this.props.cashFlowMethod}
             handleChange={this.props.handleChange}
+            handleDropdownChange={this.props.handleDropdownChange}
             annual_fcf={this.props.annual_fcf}
+            annual_fcf_units={this.props.annual_fcf_units}
             growth_rate={this.props.growth_rate}
             handleTableChange={this.props.handleTableChange}
             handleTableBlur={this.props.handleTableBlur}
+            table_units={this.props.table_units}
             timespan={this.props.timespan}
             rowArray={this.props.rowArray}
             />
             
             <Row className="sub-row wacc-row">
             <p className="input-subheading">Terminal Valuation Method:</p>
-            <Col md={3}>
+            <Col>
               <ToggleButton
                 unitsId="valueMethod" 
                 optionOne="Exit Multiple"
                 optionOneId="exit_multiple"
-                optionTwo="Terminal Growth"
+                optionTwo="Perpetual Growth"
                 optionTwoId="terminal_growth"
                 currentMethod={this.props.valueMethod}
                 currentMethodName="valueMethod"
@@ -74,6 +77,7 @@ export default class CashFlow extends React.Component{
             </Row>
             <ValueMethod
             valueMethod={this.props.valueMethod}
+            cashFlowMethod={this.props.cashFlowMethod}
             terminal_growth_rate={this.props.terminal_growth_rate}
             current_ebit={this.props.current_ebit}
             ebit_growth_rate={this.props.ebit_growth_rate}

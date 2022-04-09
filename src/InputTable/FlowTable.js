@@ -1,11 +1,13 @@
 import React from "react";
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 import InputGroup from 'react-bootstrap/InputGroup'
 import Accordion from 'react-bootstrap/Accordion'
 import Table from 'react-bootstrap/Table'
 import InputCell from "./InputCell.js";
 import { NavItem } from "react-bootstrap";
+import UnitsDropdown from "../components/UnitsDropdown.js";
 
 export default class FlowTable extends React.Component{
     constructor(){
@@ -88,42 +90,47 @@ export default class FlowTable extends React.Component{
                 let {id, fcf} = row;
                 let inst = this.props.rowArray[id];
                 return(
-                    <tr key={id}>
-                        <th className="table-side-header">Year: {id}</th>
-                        <td><InputCell
+                    <tr key={id} className="table-row">
+                        <th className="table-side-header">Year: {id+1}</th>
+                        <td><InputCell as={Form.Control}
+                        isrequired={true}
                         value={inst.ebitda} 
                         onChange={this.props.handleTableChange} 
                         onBlur={this.props.handleTableBlur} 
                         name="ebitda"
-                        id={id}
+                        title={id}
                         /></td>
                         <td><InputCell
+                        isrequired={false}
                         value={inst.depAndAmort} 
                         onChange={this.props.handleTableChange} 
                         onBlur={this.props.handleTableBlur} 
                         name="depAndAmort"
-                        id={id}
+                        title={id}
                         /></td>
                         <td><InputCell
+                        isrequired={false}
                         value={inst.taxes}
                         onChange={this.props.handleTableChange} 
                         onBlur={this.props.handleTableBlur} 
                         name="taxes"
-                        id={id}
+                        title={id}
                         /></td>
                         <td><InputCell
+                        isrequired={false}
                         value={inst.capex} 
                         onChange={this.props.handleTableChange} 
                         onBlur={this.props.handleTableBlur} 
                         name="capex"
-                        id={id}
+                        title={id}
                         /></td>
                         <td><InputCell
+                        isrequired={false}
                         value={inst.nwc} 
                         onChange={this.props.handleTableChange} 
                         onBlur={this.props.handleTableBlur} 
                         name="nwc"
-                        id={id}
+                        title={id}
                         />
                         </td>
                         <td className="cell-read-only">{fcf}</td>
@@ -155,6 +162,15 @@ export default class FlowTable extends React.Component{
     renderTable(){
         if(this.props.timespan > 0){
             return(
+            <>
+            <Row className="wacc-row table-units-container"> 
+            <p className="form-label">Table Units: </p>
+            <UnitsDropdown
+              form_title="table_units"
+              form_units={this.props.table_units}
+              handleDropdownChange={this.props.handleDropdownChange}
+            />
+            </Row>
             <div className="flow-table-container">
             <table className="flow-table">
             {this.renderTableHeader()}
@@ -163,6 +179,7 @@ export default class FlowTable extends React.Component{
             </tbody>
             </table>
             </div>
+            </>
             );
         }
         return(

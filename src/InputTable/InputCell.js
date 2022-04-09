@@ -10,16 +10,21 @@ export default class InputCell extends React.Component{
     }
     render(){
     return(
-        <input
+        <>
+        <Form.Control
+        required={this.props.isrequired}
         type="number"
         name={this.props.name}
         onChange={this.props.onChange}
         onBlur={this.props.onBlur} 
         value={this.props.value}
-        id={this.props.id}
+        title={this.props.title}
         className="tableInput"
-        >
-        </input>
+        />
+        <Form.Control.Feedback type="invalid" className="table-feedback">
+        Invalid
+        </Form.Control.Feedback>
+        </>
     );
     }
 }

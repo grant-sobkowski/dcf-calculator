@@ -19,7 +19,7 @@ export default class CostEquity extends React.Component{
               placeholder="20"
               min="0"
               max="999"
-              step=".01"
+              step=".0001"
               name="debt"
               value={this.props.debt}
               onChange={this.props.handleChange} />

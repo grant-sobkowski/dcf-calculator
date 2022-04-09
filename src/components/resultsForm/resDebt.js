@@ -22,7 +22,7 @@ export default class NAME extends React.Component{
                   pattern='[\d+]'
                   type="number" 
                   placeholder="20" min="0" max="999"
-                  step=".01"
+                  step=".0001"
                   name="debt"
                   value={this.props.debt}
                   onChange={this.props.handleChange} />
@@ -47,7 +47,7 @@ export default class NAME extends React.Component{
                   pattern='[\d+]'
                   type="number" 
                   placeholder="20" min="0" max="999"
-                  step=".01"
+                  step=".0001"
                   name="interest"
                   value={this.props.interest}
                   onChange={this.props.handleChange} />
