@@ -11,8 +11,9 @@ $soft-white: rgb(255, 255, 255, 0.80);
 
 .start-container{
   background-color: $bg-grey;
-  height: 100vh;
+  min-height: 100vh;
   margin-top:0px;
+  width: auto;
 }
 .start-title{
   color:$soft-white;
@@ -30,6 +31,44 @@ $soft-white: rgb(255, 255, 255, 0.80);
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
+}
+//Static Content
+.static-description-container{
+  width: 100%;
+  margin: 0;
+}
+.static-description{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 430px;
+  text-align: center;
+  font-size: 22px;
+  color: white;
+  padding: 80px 6px 30px 6px;
+}
+.chick-foot-row{
+  justify-content: center; 
+  margin-left: auto;
+  margin-right: auto;
+}
+.icon-container{
+  padding: 30px 0px 30px 0px;
+  margin-left: 20px;
+  margin-right: 20px;
+  >h2{
+    padding-top: 20px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+  }
+}
+.chick-icon{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  width: fit-content;
+  background-color: white;
+  border-radius: 54px;
 }
 .app{
   padding-bottom: 60px;
@@ -91,6 +130,9 @@ $soft-white: rgb(255, 255, 255, 0.80);
 h3{
   color: $rb-green !important;
   font-size: 1.35rem;
+}
+body{
+  background-color: $bg-grey;
 }
 #root{
   background-color: $bg-grey;

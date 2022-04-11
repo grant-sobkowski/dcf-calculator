@@ -1,35 +1,42 @@
 import React from "react";
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import iconCustom from '../assets/custom_icon.png';
+import iconFree from '../assets/free_icon.png';
+import iconSimple from '../assets/simple_icon.png';
 import Button from 'react-bootstrap/Button'
 
 export default class StartContent extends React.Component{
     render(){
     return(
-    <div className="start-container">
-        <h1 className="start-title">DCF Tool</h1>
-        <Button variant="outline-success" className='start-button' onClick={this.createForm}>Start</Button>{' '}
+    <div>
         <div className='home-content-container'>
-            <Row>
-                <p>
-                    DCF Tool brings users the utility of the beloved Discounted Cash Flow Method 
+            <Row className="static-description-container">
+                <span className="static-description">
+                    Our DCF Tool brings users the utility of the ubiquitous Discounted Cash Flow Method 
                     without the headaches of big applications. 
-                </p>
+                </span>
             </Row>
-            <Row>
-            <Col sm={8} lg={3}>
-                <h2></h2>
-                <image></image>
+            <Row className="chick-foot-row">
+            <Col sm={10} md={2} className="icon-container">
+                <div className="chick-icon">
+                    <img src={iconFree} alt="icon"></img>
+                </div>
+                <h2>Free</h2>
                 <p></p>
             </Col>
-            <Col sm={8} lg={3}>
-                <h2></h2>
-                <image></image>
+            <Col sm={10} md={2} className="icon-container">
+                <div className="chick-icon">
+                <img src={iconCustom} alt="icon"></img>
+                </div>
+                <h2>Customizable</h2>
                 <p></p>
             </Col>
-            <Col sm={8} lg={3}>
-                <h2></h2>
-                <image></image>
+            <Col sm={10} md={2} className="icon-container">
+                <div className="chick-icon">
+                <img src={iconSimple} alt="icon"></img>
+                </div>
+                <h2>Simple</h2>
                 <p></p>
             </Col>
             </Row>

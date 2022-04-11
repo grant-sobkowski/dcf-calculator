@@ -15,6 +15,7 @@ import Form from 'react-bootstrap/Form';
 import spinner from './assets/spinner.svg';
 import RenderReadout from './components/RenderReadout.js';
 import NaviBar from './components/NaviBar.js';
+import StartContent from './components/StartContent.js';
 
 class App extends React.Component {
   constructor(){
@@ -567,7 +568,8 @@ class App extends React.Component {
       <NaviBar loadHomeScreen={this.loadHomeScreen}/>
       <div className="start-container">
         <h1 className="start-title">DCF Calculator</h1>
-        <Button variant="outline-success" className='start-button' onClick={this.createForm}>Start</Button>{' '}
+        <Button variant="outline-success" className='start-button' onClick={this.createForm}>Get Started</Button>{' '}
+        <StartContent/>
       </div>
       </>
       );
@@ -650,7 +652,7 @@ class App extends React.Component {
                 type: 'bar',
                 x: this.state.fcfArray[1],
                 y: dcfArray,
-                marker: {color: '#7FE382 '}
+                marker: {color: '#7FE382'}
               },
               {
                 name: 'FCF',
@@ -722,7 +724,7 @@ class App extends React.Component {
                 type: 'bar',
                 name: '',
                 marker: {
-                  color: 'rgba(55,128,191,0.7)'
+                  color: '#7FE382'
                 },
                 hovertemplate:'value: $' + this.state.current_price
               },
@@ -732,7 +734,7 @@ class App extends React.Component {
                 type: 'bar',
                 name: '',
                 marker: {
-                  color: 'rgba(219, 64, 82, 0.7)'
+                  color: 'rgb(255, 255, 255, 0.80)'
                 },
                 hovertemplate:'value: $' + Math.trunc(this.state.fair_price - this.state.current_price)
               },
@@ -742,7 +744,7 @@ class App extends React.Component {
                 type: 'bar',
                 name: '',
                 marker: {
-                  color: 'rgba(50,171, 96, 0.7)'
+                  color: '#00c805'
                 },
                 hovertemplate:'value: $' + (this.state.fair_price)
               }
