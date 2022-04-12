@@ -94,7 +94,7 @@ export default class EquityParams extends React.Component{
       <InputGroup>
           <Form.Control
             disabled={(!this.props.open_0_0 || this.props.open_0_1)?true:false}
-            required={false}
+            required={(this.props.open_0_0 && !this.props.open_0_1)?true:false}
             className='input-results'
             type="number" placeholder="20" min="0" max="999"
             step=".0001" 

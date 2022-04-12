@@ -41,7 +41,7 @@ export default class CostEquity extends React.Component {
     }
     return(
       <Row className="sub-row wacc-row">
-        <Form.Group as={Col} sm={12} md={6}>
+        <Form.Group as={Col} sm={12} md={6} className='mb-3'>
           <Form.Label>Forward Dividend Yield (%)</Form.Label>
           <Form.Control 
             required
