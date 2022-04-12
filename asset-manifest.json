@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/dcf-calculator/static/css/main.3855ac07.css",
+    "main.js": "/dcf-calculator/static/js/main.1ce54273.js",
+    "static/js/787.730ff4fc.chunk.js": "/dcf-calculator/static/js/787.730ff4fc.chunk.js",
+    "index.html": "/dcf-calculator/index.html",
+    "static/media/spinner.svg": "/dcf-calculator/static/media/spinner.f8a90a6fd4efa46f9a872776c60893c1.svg",
+    "main.3855ac07.css.map": "/dcf-calculator/static/css/main.3855ac07.css.map",
+    "main.1ce54273.js.map": "/dcf-calculator/static/js/main.1ce54273.js.map",
+    "787.730ff4fc.chunk.js.map": "/dcf-calculator/static/js/787.730ff4fc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3855ac07.css",
+    "static/js/main.1ce54273.js"
+  ]
+}
