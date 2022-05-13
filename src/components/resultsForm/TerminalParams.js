@@ -89,7 +89,7 @@ export default class TerminalParams extends React.Component{
         </Form.Group>
 
         <Form.Group>
-        <Form.Label>Exit Multiple (EBITDA/EV Ratio)</Form.Label>
+        <Form.Label>Exit Multiple (EV/EBITDA Ratio)</Form.Label>
         <Form.Control
             required={this.props.open_1_0}
             className='input-results'

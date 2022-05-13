@@ -104,7 +104,7 @@ export default class ValueMethod extends React.Component{
 
                     </Form.Group>
                     <Form.Group as={Col} sm={12} md={6}>
-                    <Form.Label>Exit Multiple (EBITDA/EV Ratio)</Form.Label>
+                    <Form.Label>Exit Multiple (EV/EBITDA Ratio)</Form.Label>
                     <Form.Control
                         required
                         type="number" 
