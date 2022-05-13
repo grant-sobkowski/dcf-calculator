@@ -34,7 +34,7 @@ export default class Paramaters extends React.Component {
                         Please enter an integer within the range 1 - 10
                     </Form.Control.Feedback>
                 </Form.Group>
-                <Form.Group as={Col} md={6} sm={12}>
+                <Form.Group as={Col} md={6} sm={12} className="mb-3">
                     <Form.Label>Current Price ($)</Form.Label>
                     <Form.Control 
                     required
@@ -50,11 +50,10 @@ export default class Paramaters extends React.Component {
                         Please enter number within the range .0001 - 500,000
                     </Form.Control.Feedback>
                 </Form.Group>
-                <Form.Group as={Col} sm={12} md={6}>
+                <Form.Group as={Col} sm={12} md={6} className="mb-3">
                 <Form.Label>Risk Free Rate (%)</Form.Label>
                 <Form.Control
                   required
-                  className="mb-3"
                   type="number"
                   placeholder="1.5"
                   min=".0001"
@@ -67,11 +66,10 @@ export default class Paramaters extends React.Component {
                     Please enter a number within the range .01 - 100
                   </Form.Control.Feedback>
                 </Form.Group>
-                <Form.Group as={Col} sm={12} md={6}>
+                <Form.Group as={Col} sm={12} md={6} className="mb-3">
                 <Form.Label>Tax Rate (%)</Form.Label>
                 <Form.Control
                   required
-                  className="mb-3"
                   type="number"
                   placeholder="20"
                   min=".0001"

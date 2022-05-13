@@ -86,7 +86,7 @@ export default class ValueMethod extends React.Component{
                     </InputGroup>
                     </Form.Group>
 
-                    <Form.Group as={Col} sm={12} md={6}>
+                    <Form.Group as={Col} sm={12} md={6} className='mb-3'>
                     <Form.Label>Projected EBITDA Growth Rate (%)</Form.Label>
                     <Form.Control
                         required
